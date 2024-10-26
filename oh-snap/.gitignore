@@ -9,7 +9,6 @@ npm-debug.*
 *.mobileprovision
 *.orig.*
 web-build/
-Turtle.png
 
 # macOS
 .DS_Store

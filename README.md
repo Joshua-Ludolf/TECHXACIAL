@@ -3,7 +3,7 @@
 <br> <br>
 
 
-![plot](~/oh-snap/turtle.txt)
+![plot](~/oh-snap/Turtle.png)
 
 
 

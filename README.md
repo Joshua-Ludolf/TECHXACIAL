@@ -1,5 +1,5 @@
 # TECHXACIAL
-Future Banking Application
+<h2 align="Center"> Future Banking Application </h2>
 
 # Overview
 -----------------------------------------------------------------------------------------------------------------------------

@@ -9,6 +9,7 @@ export default function Index() {
         justifyContent: "center",
         alignItems: "center",
       }}
+      
     >
       <Text>Edit app/index.tsx to edit this screen.</Text>
       <Link href="/details">This text links to the details page. </Link>

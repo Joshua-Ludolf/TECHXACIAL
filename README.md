@@ -1,5 +1,5 @@
 # TECHXACIAL
-<h1 align="Center"> Future Banking Application </h1>
+## <p align="Center"> Future Banking Application </p>
 
 # Overview
 -----------------------------------------------------------------------------------------------------------------------------

@@ -3,7 +3,7 @@
 
 # Overview
 -----------------------------------------------------------------------------------------------------------------------------
-<b> <p align="Center"> This application aims to provide baking services to underbanked and unbanked populations, offering them an accessible and affordable way to enjoy baked goods. </p></b>
+<b> <p align="Center"> This application aims to provide baking services to underbanked and unbanked populations, offering them an accessible and affordable way to enjoy baked goods. </p></b> <br><br>
 
 # Features
 <b>

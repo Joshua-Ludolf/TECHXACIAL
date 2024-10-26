@@ -16,7 +16,7 @@ Cash-Based Transactions</b>: <i> Support for cash payments to accommodate users 
 Prepaid Card Integration</b>: <i> Option to use prepaid cards for transactions. </i>
 <br>
 <b>
-Community Engagement</b>: <i> Features to connect users with local baking events and workshops. </i>
+Community Engagement</b>: <i> Features to connect users with local banking events and workshops. </i>
 <br>
 <b>
 Nutritional Information</b>: <i> Detailed nutritional information for all baked goods. </i>
@@ -25,7 +25,7 @@ Nutritional Information</b>: <i> Detailed nutritional information for all baked 
 
 -----------------------------------------------------------------------------------------------------------------------------
 
-# Contact Us
+# <p align="Center"> Contact Us </p>
 <p align="Center">
 <i> Reach out to us via community post :D! </i>
 </p>

@@ -1,4 +1,4 @@
-# TECHXACIAL
+# <p align="Center"> TECHXACIAL </p>
 ## <p align="Center"> Future Banking Application </p>
 
 # Overview

@@ -3,7 +3,7 @@
 <br> <br>
 
 
-![plot](~/Downloads/TECHXACIAL/oh-snap/Turtle.png)
+![screenshot](Turtle.png)
 
 
 

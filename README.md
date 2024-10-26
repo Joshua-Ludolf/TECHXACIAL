@@ -22,6 +22,7 @@ Community Engagement</b>: <i> Features to connect users with local baking events
 Nutritional Information</b>: <i> Detailed nutritional information for all baked goods. </i>
 <br>
 </b>
+
 -----------------------------------------------------------------------------------------------------------------------------
 
 # Contact Us

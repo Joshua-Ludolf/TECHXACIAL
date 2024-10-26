@@ -9,23 +9,23 @@
 
 # <p align="Center"> Overview </p>
 -----------------------------------------------------------------------------------------------------------------------------
-<b> <p align="Center"> This application aims to provide baking services to underbanked and unbanked populations, offering them an accessible and affordable way to enjoy baked goods. </p></b> <br><br>
+<b> <p align="Center"> This application aims to provide baking services to underbanked and unbanked populations, offering them an accessible and easy to utilize banking service. </p></b> <br><br>
 
 # <p align="Center"> Features </p>
 <b>
 User-Friendly Interface</b>: <i> Easy navigation for all users, including those with limited tech experience.</i>
 <br>
 <b>
-Cash-Based Transactions</b>: <i> Support for cash payments to accommodate users without bank accounts. </i>
+Online Transactions</b>: <i> Support for cash transfers to accommodate users without bank accounts. </i>
 <br>
 <b>
 Prepaid Card Integration</b>: <i> Option to use prepaid cards for transactions. </i>
 <br>
 <b>
-Community Engagement</b>: <i> Features to connect users with local banking events and workshops. </i>
+Community Engagement</b>: <i> Features to connect younger audience to our service. Ease of use to Elderly and very inclusive to each unique individual</i>
 <br>
 <b>
-Nutritional Information</b>: <i> Detailed nutritional information for all baked goods. </i>
+</b>: <i> Detailed nutritional information for all baked goods. </i>
 <br>
 </b>
 

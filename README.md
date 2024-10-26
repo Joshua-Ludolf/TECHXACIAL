@@ -2,7 +2,7 @@
 Future Banking Application
 
 # Overview
-====================================================================================================================================
+-----------------------------------------------------------------------------------------------------------------------------
 <b> This application aims to provide baking services to underbanked and unbanked populations, offering them an accessible and affordable way to enjoy baked goods. </b>
 
 # Features
@@ -22,7 +22,7 @@ Community Engagement</b>: <i> Features to connect users with local baking events
 Nutritional Information</b>: <i> Detailed nutritional information for all baked goods. </i>
 <br>
 </b>
-==============================================================================================
+--------------------------------------------------------------------------------------------------
 # Contact Us
 
 <i> Reach out to us via community post :D! </i>

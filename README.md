@@ -2,7 +2,7 @@
 ## <p align="Center"> Future Banking Application </p>
 <br> <br>
 
-<p align="Center">
+<p>
 _,.---.---.---.--.._ 
             _.-' `--.`---.`---'-. _,`--.._
            /`--._ .'.     `.     `,`-.`-._\

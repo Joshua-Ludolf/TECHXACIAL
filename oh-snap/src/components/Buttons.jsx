@@ -1,4 +1,5 @@
 import React from "react";
+import PostRequest from "./PostRequest";
 
 function Buttons() {
   const handleSend = () => {
@@ -26,7 +27,7 @@ function Buttons() {
       </style>
       <button onClick={handlePay}> Send </button>
       <button onClick={handleReceive}>Receive</button>
-      <button onClick={handleCashIn}> Cash-In </button>{" "}
+      <button onClick={handleCashIn}> Cash-In </button> <PostRequest />
     </div>
   );
 }

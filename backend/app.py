@@ -3,12 +3,22 @@ from flask import Flask, request, render_template, redirect, url_for, jsonify
 from flask_login import LoginManager, login_user, logout_user, login_required
 from flask_cors import CORS
 import mysql.connector
-import sql, groq_module, os, users
+import sql, groq_module, os, users, sms
+
+
 
 app = Flask(__name__)
 CORS(app, origins='*') 
 
+login_manager = LoginManager(app)
+login_manager.login_view = 'login'
+
+@login_manager.user_loader
+def load_user(user_id):
+    return users.get_by_id(user_id)
+
 @app.route("/", methods=['GET', 'POST'])
+@login_required
 def home():
     groq_module.translate()
     path = os.path.join(os.getcwd(), 'oh-snap', 'index.html')
@@ -28,7 +38,7 @@ def add_money():
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
-    if request.method == 'POST':
+    if request.method == 'POST' or request.method == 'GET':
         username = request.form['username']
         password = request.form['password']
         user = users.get_by_username(username)
@@ -54,6 +64,14 @@ def register():
         return redirect(url_for('login'))
     return {'response': "User Created"}
 
+@app.route('/send_sms', methods=['POST'])
+@login_required
+def send_sms():
+    data = request.json
+    to_number = data['to_number']
+    message = data['message']
+    message_sid = send_sms(to_number, message)
+    return jsonify({'status': 'success', 'message_sid': message_sid})
 
 if __name__ == "__main__":
     app.run(debug=True)

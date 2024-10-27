@@ -25,6 +25,17 @@ function PostRequest() {
     }
   };
 
+  const addMoney = async (amount, description) => {
+    try {
+        const response = await axios.post('http://localhost:5000/add_money', 
+            { amount, description },
+            { headers: { 'Content-Type': 'application/json' } }
+        );
+        console.log(response.data);
+    } catch (error) {
+        console.error(error.response.data);
+    }
+};
  
 
   return (

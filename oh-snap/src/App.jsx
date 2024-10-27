@@ -10,7 +10,7 @@ function App() {
       <main>
         <Balance />
         <Buttons />
-        <PostRequest />
+        {/* <PostRequest /> */}
       </main>
     </>
   );

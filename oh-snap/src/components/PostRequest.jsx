@@ -25,11 +25,8 @@ function PostRequest() {
     }
   };
 
- 
-
   return (
     <div>
-      erm
       <button onClick={handleSubmit}>Make Post Request</button>
       {response && <div>Response: {JSON.stringify(response)}</div>}
       <div>PostRequest</div>

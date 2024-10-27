@@ -1,6 +1,5 @@
 """This module is responsible for handling the groq API requests."""
 import os
-from flask import Flask, render_template, jsonify
 from groq import Groq
 
 os.environ['GROQ_API_KEY'] = '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'

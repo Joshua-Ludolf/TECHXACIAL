@@ -3,7 +3,7 @@ import os
 
 # Twilio credentials
 account_sid = 'SK5e1aa1c447d710c4c9361e410d601054'
-auth_token = 'bx14fish5XfYzczufsvLBpcmKlbF9PO3'
+auth_token = os.getenv('TWILIO_PHONE_NUMBER')
 client = Client(account_sid, auth_token)
 
 def send_sms(to_number, message):

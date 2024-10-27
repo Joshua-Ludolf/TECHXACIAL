@@ -41,8 +41,10 @@ function Login({ setIsAuthenticated }) {
       });
       setResponse(res.data);
       console.log(res.data);
-      if (res.data.success) {
+      console.log(res.data.response);
+      if (res.data.response === "Logged In") {
         setIsAuthenticated(true);
+        alert("Login successful");
       } else {
         alert("Login failed");
       }

@@ -1,33 +1,17 @@
+from dotenv import load_dotenv
 from flask import Flask, render_template, request, jsonify
 import mysql.connector
 import os
 
-os.environ['DB_HOST'] = 'localhost'
-os.environ['DB_USER'] = 'root'
-os.environ['DB_PASSWORD'] = 'jaguarJosh-25'
-os.environ['TB_ACCOUNTS'] = 'ACCOUNTS'
-os.environ['TB_USERS'] = 'USERS'
+def get_db_connection():
+    load_dotenv()
+    return mysql.connector.connect(
+        host=os.getenv('DB_HOST'),
+        user=os.getenv('DB_USER'),
+        password=os.getenv('DB_PASSWORD'),
+        database=os.getenv('DB_NAME')
+    )
 
-db_config = {
-    'host': os.getenv('DB_HOST'),
-    'user': os.getenv('DB_USER'),
-    'password': os.getenv('DB_PASSWORD'),
-    'database': os.getenv('DB_ACCOUNTS')
-}
-
-db_connection_1 = mysql.connector.connect(
-    host=os.getenv('DB_HOST'),
-    user=os.getenv('DB_USER'),
-    password=os.getenv('DB_PASSWORD'),
-    database=os.getenv('DB_ACCOUNTS')
-)
-
-db_connection_2 = mysql.connector.connect(
-    host=os.getenv('DB_HOST'),
-    user=os.getenv('DB_USER'),
-    password=os.getenv('DB_PASSWORD'),
-    database=os.getenv('DB_USERS')
-)
 
 def add_money(connection):
     try:

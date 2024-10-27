@@ -2,8 +2,14 @@
 ## <p align="Center"> Future Banking Application </p>
 <br> <br>
 
+## <p align="Center"> Images </p>
+-----------------------------------------------------------------------------------------------------------------------------
+<img src="Turtle.png" alt="Futuristic Snapping Turtle Decoration">
 
-<img src="Turtle.png">
+### Dark Mode
+<img src="app dark mode.png" alt="Dark Mode Image for Application">
+### Logo
+<img src="app icon.png" alt="App Logo">
 
 
 

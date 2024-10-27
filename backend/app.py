@@ -1,4 +1,4 @@
-"""This is the main file for the backend. It is responsible for running the Flask server and serving the frontend."""
+"""This is the main file for the backend. It is responsible for running the Flask server and serving the frontend. It also contains the API endpoint for handling the GROQ API requests."""
 import g
 from flask import Flask, render_template, request, jsonify
 from flask_cors import CORS

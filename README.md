@@ -4,14 +4,22 @@
 
 ## <p align="Center"> Images </p>
 -----------------------------------------------------------------------------------------------------------------------------
+<p align="Center">
 <img src="Turtle.png" alt="Futuristic Snapping Turtle Decoration">
+</p>
+
+<p align="Center">
 
 ### Dark Mode
 <img src="app dark mode.png" alt="Dark Mode Image for Application">
+</p>
+
+<p align="Center">
 
 ### Logo
 <img src="app icon.png" alt="App Logo">
 
+</p>
 
 
 # <p align="Center"> Overview </p>

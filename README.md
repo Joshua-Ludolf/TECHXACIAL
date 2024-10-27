@@ -7,9 +7,10 @@
 <img src="Turtle.png" alt="Futuristic Snapping Turtle Decoration">
 
 ### <p align="Center"> Dark Mode </p>
-<img src="app dark mode.png" alt="Dark Mode Image for Application">
+<img src="app dark mode.png" alt="Dark Mode Image for App">
 
 ### <p align="Center"> LIGHT MODE </p>
+<img src="app light mode.png" alt="Light Mode Image for App">
 
 ### <p align="Center"> Logo </p>
 <img src="app icon.png" alt="App Logo">

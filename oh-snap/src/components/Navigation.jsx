@@ -16,7 +16,7 @@ function Navigation() {
           </Link>
         </li>
         <li>
-          <Link to={"/"}>
+          <Link to={"/balance"}>
             <p className="icon">
               <IoHome />
             </p>

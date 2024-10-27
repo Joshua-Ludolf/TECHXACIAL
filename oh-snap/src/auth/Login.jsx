@@ -46,6 +46,7 @@ function Login({ setIsAuthenticated, setUser, user }) {
       console.log(res.data.response);
       if (res.data.response === "Logged In") {
         setIsAuthenticated(true);
+        console.log("User in Login: ", res.data.user);
         setUser(res.data.user);
         navigate("/balance");
       } else {

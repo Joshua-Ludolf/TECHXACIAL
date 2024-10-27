@@ -27,7 +27,7 @@ function Buttons() {
       </style>
       <button onClick={handlePay}> Send </button>
       <button onClick={handleReceive}>Receive</button>
-      <button onClick={handleCashIn}> Cash-In </button> <PostRequest />
+      <button onClick={handleCashIn}> Cash-In </button>
     </div>
   );
 }

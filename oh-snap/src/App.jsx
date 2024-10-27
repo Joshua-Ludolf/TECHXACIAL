@@ -8,10 +8,11 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import NavScreen from "./components/NavScreen";
 import Login from "./auth/Login";
 import Register from "./auth/Register";
+import Education from "./routes/Education";
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
-  const [user, setUser] = useState(null);
+  const [user, setUser] = useState({});
 
   const handleLogin = () => {
     setIsAuthenticated(true);
@@ -21,7 +22,8 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Start />} />
-        <Route path="/balance" element={<Balance />} />
+        <Route path="/balance" element={<Balance user={user} />} />
+        <Route path="/education" element={<Education user={user} />} />
         <Route
           path="/login"
           element={<Login setIsAuthenticated={setIsAuthenticated} setUser={setUser} user={user} />}
@@ -33,7 +35,7 @@ function App() {
         {/* Add more routes as needed */}
       </Routes>
       {isAuthenticated ? (
-        <NavScreen setIsAuthenticated={setIsAuthenticated} />
+        <NavScreen setIsAuthenticated={setIsAuthenticated} user={user} />
       ) : (
         <div></div>
       )}

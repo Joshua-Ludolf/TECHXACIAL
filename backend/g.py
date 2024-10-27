@@ -11,7 +11,7 @@ def groq(input):
         messages=[
             {
                 "role": "user",
-                "content": "Explain the importance of fast language models",
+                "content": "Explain the concept of Finances",
             }
         ],
         model="llama3-8b-8192",

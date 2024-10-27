@@ -1,9 +1,14 @@
-import React from 'react'
+import React from "react";
 
 function Education() {
   return (
-    <div>Education</div>
-  )
+    <>
+      <main>
+        <h1 className="text-5xl">Education</h1>
+        <p className="mt-6">This is the education page.</p>
+      </main>
+    </>
+  );
 }
 
-export default Education
+export default Education;

@@ -5,7 +5,7 @@ import { FaBook, FaCamera } from "react-icons/fa";
 
 function Navigation() {
   return (
-    <nav className="text-black bg-black">
+    <nav className="">
       <ul>
         <li className="">
           <Link to={"/scan"}>

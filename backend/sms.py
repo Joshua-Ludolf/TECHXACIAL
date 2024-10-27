@@ -2,7 +2,7 @@ from twilio.rest import Client
 import os
 
 # Twilio credentials
-account_sid = 'SK5e1aa1c447d710c4c9361e410d601054'
+account_sid = os.getenv('TWILIO_ACCOUNT_SID')
 auth_token = os.getenv('TWILIO_PHONE_NUMBER')
 client = Client(account_sid, auth_token)
 

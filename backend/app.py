@@ -1,9 +1,11 @@
 """This is the main file for the backend. It is responsible for running the Flask server and serving the frontend. It also contains the API endpoint for handling the GROQ API requests."""
+from dotenv import load_dotenv
 from flask import Flask, request, render_template, redirect, url_for, jsonify
 from flask_login import LoginManager, login_user, logout_user, login_required
 from flask_cors import CORS
 import mysql.connector
 import sql, groq_module, os, users
+
 
 app = Flask(__name__)
 CORS(app, origins='*') 
@@ -21,23 +23,24 @@ def main():
     return jsonify({'response': response})
 
 
-@app.route('/add_money', methods=['GET', 'POST'])
-def add_money():
-    sql.add_money(connection=mysql.connector.connect(**sql.db_connection_1))
-    return {'response': "Money Added"}
-
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
-        username = request.form['username']
-        password = request.form['password']
-        user = users.get_by_username(username)
-        if user and user.password == password:
-            login_user(user)
-            return redirect(url_for('home'))
+        data = request.get_json()
+        print(f"""Received data: {data}""")
+        username = data['username']
+        print(f"""Username: {username["username"]}""")
+        password = data['password']
+        print(f"""pw: {password["password"]}""")
+
+        user = users.User.get_by_username(username["username"])
+        print(f"""user: {user}""")
+        if user and user[2] == password["password"]:
+            # login_user(user)
+            return {'response': "Logged In", 'user': user}
         else:
             return{'response':'Invalid credentials'}
-    return {'response': "Logged In"}
+    
 
 @app.route('/logout')
 @login_required

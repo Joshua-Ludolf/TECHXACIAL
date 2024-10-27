@@ -24,15 +24,18 @@
 <b>
 User-Friendly Interface</b>: <i> Easy navigation for all users, including those with limited tech experience.</i>
 <br>
+<br>
 <b>
 Online Transactions</b>: <i> Support for cash transfers to accommodate users without bank accounts. </i>
+<br>
 <br>
 <b>
 Prepaid Card Integration</b>: <i> Option to use prepaid cards for transactions. </i>
 <br>
+<br>
 <b>
 Community Engagement</b>: <i> Features to connect younger audience to our service. Ease of use to Elderly and very inclusive to each unique individual</i>
-
+<br>
 -----------------------------------------------------------------------------------------------------------------------------
 
 # <p align="Center"> Contact Us </p>

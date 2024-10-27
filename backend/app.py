@@ -1,19 +1,9 @@
 """This is the main file for the backend. It is responsible for running the Flask server and serving the frontend. It also contains the API endpoint for handling the GROQ API requests."""
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, request, render_template, redirect, url_for, jsonify
+from flask_login import LoginManager, login_user, logout_user, login_required
 from flask_cors import CORS
 import mysql.connector
-import sql
-import groq_module
-import os
-
-config = {
-        'user': 'root',
-        'password': 'jaguarJosh-25',
-        'host': '127.0.0.1',
-        'port': '3306',
-        'database': 'finances'
-    }
-
+import sql, groq_module, os, users
 
 app = Flask(__name__)
 CORS(app, origins='*') 
@@ -33,8 +23,36 @@ def main():
 
 @app.route('/add_money', methods=['GET', 'POST'])
 def add_money():
-    sql.add_money(connection=mysql.connector.connect(**config))
+    sql.add_money(connection=mysql.connector.connect(**sql.db_config))
     return {'response': "Money Added"}
+
+@app.route('/login', methods=['GET', 'POST'])
+def login():
+    if request.method == 'POST':
+        username = request.form['username']
+        password = request.form['password']
+        user = users.get_by_username(username)
+        if user and user.password == password:
+            login_user(user)
+            return redirect(url_for('home'))
+        else:
+            return{'response':'Invalid credentials'}
+    return {'response': "Logged In"}
+
+@app.route('/logout')
+@login_required
+def logout():
+    logout_user()
+    return redirect(url_for('login'))
+
+@app.route('/register', methods=['GET', 'POST'])
+def register():
+    if request.method == 'POST':
+        username = request.form['username']
+        password = request.form['password']
+        users.User.create_user(username, password)
+        return redirect(url_for('login'))
+    return {'response': "User Created"}
 
 
 if __name__ == "__main__":

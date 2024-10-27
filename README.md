@@ -8,6 +8,7 @@
 
 ### Dark Mode
 <img src="app dark mode.png" alt="Dark Mode Image for Application">
+
 ### Logo
 <img src="app icon.png" alt="App Logo">
 

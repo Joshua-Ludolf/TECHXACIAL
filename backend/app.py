@@ -4,18 +4,21 @@ from flask import Flask, render_template, request, jsonify
 from flask_cors import CORS
 
 app = Flask(__name__)
-CORS(app, origins='*')  # Allow all origins during development
+CORS(app, origins='*') 
 
-@app.route("/", methods=['POST', 'GET'])
+@app.route("/query", methods=['POST', 'GET'])
 def main():
-    return jsonify()
+    data = request.get_json()
+    print(f"""Received data: {data}""")
+    response = g.groq(data['query'])
+    return jsonify({'response': response})
 
-"""
-@app.route("/api/data", methods=['POST'])
+
+@app.route("/education", methods=['GET', 'POST'])
 def handle_data():
     data = request.get_json()
     response = g.groq(data['input'])
     return jsonify({'response': response})
-"""
+
 if __name__ == "__main__":
-    app.run(debug=True, port=3000)
+    app.run(debug=True)

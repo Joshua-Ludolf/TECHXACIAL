@@ -2,6 +2,11 @@
 ## <p align="Center"> Future Banking Application </p>
 <br> <br>
 
+# <p align="Center"> Overview </p>
+<hr>
+<b> <p align="Center"> This application aims to provide baking services to underbanked and unbanked populations, offering them an accessible and easy to utilize banking service. </p></b> 
+<br><br>
+
 ## <p align="Center"> Images </p>
 <hr>
 <img src="Turtle.png" alt="Futuristic Snapping Turtle Decoration">
@@ -15,11 +20,7 @@
 ### <p align="Center"> Logo </p>
 <img src="app icon.png" alt="App Logo">
 
-
-
-# <p align="Center"> Overview </p>
-<hr>
-<b> <p align="Center"> This application aims to provide baking services to underbanked and unbanked populations, offering them an accessible and easy to utilize banking service. </p></b> <br><br>
+<br><br>
 
 # <p align="Center"> Features </p>
 <b>

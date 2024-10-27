@@ -3,6 +3,9 @@ import axios from "axios";
 
 function PostRequest() {
   const [response, setResponse] = useState(null);
+  const [text, setText] = useState('');
+    const [translatedText, setTranslatedText] = useState('');
+    const [targetLanguage, setTargetLanguage] = useState('');
 
   const api = axios.create({
     baseURL: "http://localhost:5000",
@@ -25,6 +28,29 @@ function PostRequest() {
     }
   };
 
+  const addMoney = async (amount, description) => {
+    try {
+        const response = await axios.post('http://localhost:5000/add_money', 
+            { amount, description },
+            { headers: { 'Content-Type': 'application/json' } }
+        );
+        console.log(response.data);
+    } catch (error) {
+        console.error(error.response.data);
+    }
+};
+
+   const handleTranslate = async () => {
+     try {
+         const response = await axios.post('http://localhost:5000/translate', {
+             text,
+             target_language: targetLanguage
+         });
+         setTranslatedText(response.data.translatedText);
+     } catch (error) {
+         console.error('Error translating text:', error);
+     }
+   };
  
 
   return (

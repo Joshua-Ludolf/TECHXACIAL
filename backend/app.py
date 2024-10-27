@@ -8,6 +8,7 @@ import sql, groq_module, os, users, sms
 
 
 app = Flask(__name__)
+app.secret_key = os.getenv('SECRET_KEY')
 CORS(app, origins='*') 
 
 login_manager = LoginManager(app)
@@ -66,7 +67,7 @@ def register():
 
 @app.route('/send_sms', methods=['POST'])
 @login_required
-def send_sms():
+def send_sms(to_number, message):
     data = request.json
     to_number = data['to_number']
     message = data['message']

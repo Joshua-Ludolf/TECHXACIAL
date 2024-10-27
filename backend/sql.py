@@ -2,11 +2,7 @@ from flask import Flask, render_template, request, jsonify
 import mysql.connector
 import os
 
-os.environ['DB_HOST'] = 'localhost'
-os.environ['DB_USER'] = 'root'
-os.environ['DB_PASSWORD'] = 'jaguarJosh-25'
-os.environ['TB_ACCOUNTS'] = 'ACCOUNTS'
-os.environ['TB_USERS'] = 'USERS'
+
 
 db_config = {
     'host': os.getenv('DB_HOST'),

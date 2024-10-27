@@ -1,10 +1,12 @@
 import axios from "axios";
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, redirect, useNavigate } from "react-router-dom";
 
-function Login({ setIsAuthenticated }) {
+function Login({ setIsAuthenticated, setUser, user }) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+
+  const navigate = useNavigate();
 
   // const handleSubmit = (e) => {
   //   e.preventDefault();
@@ -44,7 +46,8 @@ function Login({ setIsAuthenticated }) {
       console.log(res.data.response);
       if (res.data.response === "Logged In") {
         setIsAuthenticated(true);
-        alert("Login successful");
+        setUser(res.data.user);
+        navigate("/balance");
       } else {
         alert("Login failed");
       }

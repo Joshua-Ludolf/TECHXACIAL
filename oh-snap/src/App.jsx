@@ -24,7 +24,7 @@ function App() {
         <Route path="/balance" element={<Balance />} />
         <Route
           path="/login"
-          element={<Login setIsAuthenticated={setIsAuthenticated} />}
+          element={<Login setIsAuthenticated={setIsAuthenticated} setUser={setUser} user={user} />}
         />
         <Route
           path="/register"

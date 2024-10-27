@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import NavScreen from "./NavScreen";
 import Buttons from "./Buttons";
 
-function Balance() {
+function Balance( { user }) {
   return (
     <>
       <div>

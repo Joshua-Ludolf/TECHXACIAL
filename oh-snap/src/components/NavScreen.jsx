@@ -4,8 +4,9 @@ import { CgProfile } from "react-icons/cg";
 import { FaBook, FaBookOpen } from "react-icons/fa6";
 import { GiTurtleShell, GiTurtle } from "react-icons/gi";
 import Navigation from "./Navigation";
+import { Link } from "react-router-dom";
 
-function NavScreen( {setIsAuthenticated} ) {
+function NavScreen( {setIsAuthenticated, user} ) {
   const [isDrawerOpen, setDrawerOpen] = useState(false);
 
   const toggleDrawer = () => {
@@ -35,6 +36,7 @@ function NavScreen( {setIsAuthenticated} ) {
         {isOpen && <Navigation />}
       </div>
       <div style={{ position: "absolute", bottom: 0, left: 0 }} className="p-5">
+        <Link to="/education">
         <button
           style={{
             background: "none",
@@ -47,6 +49,7 @@ function NavScreen( {setIsAuthenticated} ) {
         >
           <GiTurtle size={75} />
         </button>
+        </Link>
       </div>
       <div style={{ position: "absolute", top: 0, left: 0 }}>
         <button
@@ -69,12 +72,19 @@ function NavScreen( {setIsAuthenticated} ) {
           >
             {
               <>
-                <div>Username</div>
-                <div className="justify-center">
-                  <IoSettingsOutline size={45} />
-                </div>
+                <div>{user && user[1]}</div>
               </>
             }
+            <Link to="/">
+            <button onClick={
+              () => {
+                setIsAuthenticated(false);
+              }
+            }>
+              Sign out
+            </button>
+            </Link>
+            
             <button onClick={toggleDrawer}>Close Drawer</button>
           </div>
         )}
@@ -83,4 +93,4 @@ function NavScreen( {setIsAuthenticated} ) {
   );
 }
 
-export default NavScreen;
+export default NavScreen; 

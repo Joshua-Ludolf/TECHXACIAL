@@ -13,7 +13,7 @@ def chat_bot(input):
         messages=[
             {
                 "role": "user",
-                "content": "Explain the concept of Finances",
+                "content": input,
             }
         ],
         model="llama3-8b-8192",

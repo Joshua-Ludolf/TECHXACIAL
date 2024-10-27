@@ -8,18 +8,11 @@ import Navigation from "./components/Navigation.jsx";
 import Education from "./routes/Education.jsx";
 import Scan from "./routes/Scan.jsx";
 import PostRequest from "./components/PostRequest.jsx";
+import NavScreen from "./components/NavScreen.jsx";
+import Login from "./auth/Login.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <BrowserRouter>
-      <Routes>
-        <Route index={true} path="/" element={<App />} />
-        <Route path="/:id" element={<App />} />
-        <Route path="/education" element={<Education />} />
-        <Route path="/scan" element={<Scan />} />
-      </Routes>
-      <Navigation />
-
-    </BrowserRouter>
+    <App />
   </StrictMode>
 );

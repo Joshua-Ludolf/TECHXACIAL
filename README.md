@@ -1,4 +1,4 @@
-# <p align="Center"> TECHXACIAL </p>
+# <p align="Center"> TECHXACIAL: OH SNAP! </p>
 ## <p align="Center"> Future Banking Application </p>
 <br> <br>
 

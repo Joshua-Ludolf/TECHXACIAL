@@ -32,11 +32,6 @@ Prepaid Card Integration</b>: <i> Option to use prepaid cards for transactions. 
 <br>
 <b>
 Community Engagement</b>: <i> Features to connect younger audience to our service. Ease of use to Elderly and very inclusive to each unique individual</i>
-<br>
-<b>
-</b>: <i> Detailed nutritional information for all baked goods. </i>
-<br>
-</b>
 
 -----------------------------------------------------------------------------------------------------------------------------
 

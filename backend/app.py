@@ -23,7 +23,7 @@ def main():
 
 @app.route('/add_money', methods=['GET', 'POST'])
 def add_money():
-    sql.add_money(connection=mysql.connector.connect(**sql.db_config))
+    sql.add_money(connection=mysql.connector.connect(**sql.db_connection_1))
     return {'response': "Money Added"}
 
 @app.route('/login', methods=['GET', 'POST'])

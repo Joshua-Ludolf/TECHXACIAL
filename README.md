@@ -4,7 +4,7 @@
 
 # <p align="Center"> Overview </p>
 <hr>
-<b> <p align="Center"> This application aims to provide baking services to underbanked and unbanked populations, offering them an accessible and easy to utilize banking service. </p></b> 
+<b> <p align="Center"> This application aims to provide banking services to underbanked and unbanked populations, offering them an accessible and easy to utilize banking service. </p></b> 
 <br><br>
 
 ## <p align="Center"> Images </p>

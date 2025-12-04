@@ -1,0 +1,14 @@
+# Python
+__pycache__/
+*.pyc
+.env
+
+# Node
+oh-snap/node_modules/
+oh-snap/.env
+
+# Logs
+*.log
+
+# VS Code
+.vscode/

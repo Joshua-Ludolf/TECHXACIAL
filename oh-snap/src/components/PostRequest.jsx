@@ -34,29 +34,29 @@ function PostRequest( { chatInput, user, responses, setResponses } ) {
 
 
 
-//   const addMoney = async (amount, description) => {
-//     try {
-//         const response = await axios.post('http://localhost:5000/add_money', 
-//             { amount, description },
-//             { headers: { 'Content-Type': 'application/json' } }
-//         );
-//         console.log(response.data);
-//     } catch (error) {
-//         console.error(error.response.data);
-//     }
-// };
+     const addMoney = async (amount, description) => {
+     try {
+       const response = await axios.post('http://localhost:5000/add_money', 
+         { username: user?.username, amount },
+             { headers: { 'Content-Type': 'application/json' } }
+         );
+         console.log(response.data);
+     } catch (error) {
+         console.error(error.response.data);
+     }
+ };
 
-  //  const handleTranslate = async () => {
-  //    try {
-  //        const response = await axios.post('http://localhost:5000/translate', {
-  //            text,
-  //            target_language: targetLanguage
-  //        });
-  //        setTranslatedText(response.data.translatedText);
-  //    } catch (error) {
-  //        console.error('Error translating text:', error);
-  //    }
-  //  };
+    const handleTranslate = async () => {
+      try {
+          const response = await axios.post('http://localhost:5000/translate', {
+              text,
+              target_language: targetLanguage
+          });
+          setTranslatedText(response.data.translatedText);
+      } catch (error) {
+          console.error('Error translating text:', error);
+      }
+    };
  
 
   return (

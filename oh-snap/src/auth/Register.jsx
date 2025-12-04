@@ -30,10 +30,17 @@ function Register({ setIsAuthenticated }) {
   });
 
   const handleSubmit = async (e) => {
-    const data = { username: { username }, password: { password } };
+    const data = { username, password };
     e.preventDefault();
     console.log("Authenticating...");
     try {
+      // First register the user
+      await api.post("/register", data, {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+      // Then attempt login
       const res = await api.post("/login", data, {
         headers: {
           "Content-Type": "application/json",
@@ -41,13 +48,13 @@ function Register({ setIsAuthenticated }) {
       });
       setResponse(res.data);
       console.log(res.data);
-      if (res.data.success) {
+      if (res.data.response === "Logged In") {
         setIsAuthenticated(true);
       } else {
-        alert("register failed");
+        alert("Register/Login failed");
       }
     } catch (error) {
-      alert("Error during register");
+      alert("Error during register/login");
       console.error("Error fetching data", error);
     }
   };

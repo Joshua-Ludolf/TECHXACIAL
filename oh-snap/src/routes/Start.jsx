@@ -12,7 +12,7 @@ function Start() {
         <p style={{ fontSize: "75px" }}>Oh-Snap</p>
       </div>
       <div>
-        <button onClick={() => {}}>Register</button>
+        <Link to="/register">Register</Link>
       </div>
       <div>
         <Link to="/login">Login</Link>

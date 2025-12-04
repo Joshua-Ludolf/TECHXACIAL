@@ -32,7 +32,7 @@ function Login({ setIsAuthenticated, setUser, user }) {
   });
 
   const handleSubmit = async (e) => {
-    const data = { username: { username }, password: { password } };
+    const data = { username, password };
     e.preventDefault();
     console.log("Authenticating...");
     try {

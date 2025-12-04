@@ -1,18 +1,8 @@
-from dotenv import load_dotenv
-import json
 from flask_login import UserMixin
-import mysql.connector
-import os, app, sql
 
-load_dotenv()
-db = mysql.connector.connect(
-        host=os.getenv('DB_HOST'),
-        user=os.getenv('DB_USER'),
-        password=os.getenv('DB_PASSWORD'),
-        database=os.getenv('DB_NAME')
-    )
-
-cursor = db.cursor()
+# In-memory user store to avoid MySQL dependency during development
+_users_store = {}
+_next_id = 1
 
 class User(UserMixin):
     def __init__(self, id, username, password):
@@ -22,23 +12,26 @@ class User(UserMixin):
 
     @staticmethod
     def get_by_id(user_id):
-        cursor.execute("SELECT * FROM USERS WHERE ID = %s", (user_id,))
-        user = cursor.fetchone()
-        if user:
-            return User(id=user['ID'], username=user['USERNAME'], password=user['PASSWORD'])
+        for uid, rec in _users_store.items():
+            if uid == user_id:
+                return User(id=uid, username=rec['username'], password=rec['password'])
         return None
 
     @staticmethod
     def get_by_username(username):
-        cursor.execute("SELECT * FROM FINANCES WHERE USERs = %s", (username,))
-        user = cursor.fetchone()
-        if user:
-            return user
-        else:
-            return 0
+        for uid, rec in _users_store.items():
+            if rec['username'] == username:
+                return (uid, rec['username'], rec['password'])
+        return 0
 
     @staticmethod
     def create_user(username, password):
-        cursor.execute("INSERT INTO users (USERS, PASSWORD) VALUES (%s, %s)", (username, password))
-        sql.db_connection_1.commit()
+        global _next_id
+        # Simple overwrite if username exists
+        for uid, rec in _users_store.items():
+            if rec['username'] == username:
+                _users_store[uid]['password'] = password
+                return
+        _users_store[_next_id] = {'username': username, 'password': password}
+        _next_id += 1
 
